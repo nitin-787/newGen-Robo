@@ -9,11 +9,11 @@ import { cn } from "@/lib/utils"
 const navLinks = [
   { href: "/", label: "Home", active: true },
   { href: "/about", label: "About" },
-  { href: "/franchise", label: "Open a Franchise" },
+  // { href: "/franchise", label: "Open a Franchise" },
   { href: "/school-lab", label: "School Lab Setup" },
   { href: "/center", label: "Learn at a Center" },
   { href: "/contact", label: "Contact" },
-  { href: "/more", label: "More" },
+  // { href: "/more", label: "More" },
 ]
 
 export default function Navigation() {
@@ -55,25 +55,6 @@ export default function Navigation() {
       </nav>
 
       <div className="flex items-center gap-4 z-20">
-        <Link href="/login" className="flex items-center gap-2 text-sky-500 hover:text-sky-600 transition-colors">
-          <div className="w-8 h-8 rounded-full bg-sky-100 flex items-center justify-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-            </svg>
-          </div>
-          <span className="hidden sm:inline-block">Log In</span>
-        </Link>
         <button className="md:hidden z-20" onClick={toggleMenu} aria-label="Toggle menu">
           {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
@@ -96,7 +77,7 @@ export default function Navigation() {
                 link.active && "text-sky-500 font-medium",
               )}
               onClick={() => setIsMenuOpen(false)}
-            >
+>
               {link.label}
             </Link>
           ))}
@@ -106,8 +87,7 @@ export default function Navigation() {
           <Link
             href="/contact"
             className="bg-sky-500 text-white py-3 px-6 rounded-full w-full block text-center"
-            onClick={() => setIsMenuOpen(false)}
-          >
+            onClick={() => setIsMenuOpen(false)}>
             Contact Us
           </Link>
         </div>

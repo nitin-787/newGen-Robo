@@ -2,8 +2,10 @@ import Image from "next/image"
 import Link from "next/link"
 import { PhoneIcon as WhatsappIcon } from "lucide-react"
 import RequestDemoForm from "@/components/request-demo-form"
-import StatsCounter from "@/components/stats-counter"
 import Navigation from "@/components/navigation"
+import InnovationLabShowCase from "@/components/innovation-lab-show-case"
+import ProgramCard from "@/components/program-card"
+import programs from "@/data/programs"
 
 export default function Home() {
   return (
@@ -58,17 +60,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
-            <StatsCounter value={25000} suffix="+" label="Students Trained" />
-            <StatsCounter value={200} suffix="+" label="Workshops" />
-            <StatsCounter value={4} suffix="+" label="Cities Presence" />
-            <StatsCounter value={5} suffix="+" label="Student startups launched" />
-            <StatsCounter value={13} suffix="+" label="Years of Experience" />
-          </div>
-        </div>
+      {/* innovation lab showcase section */}
+      <section className="py-16">
+        <InnovationLabShowCase />
       </section>
 
       {/* Request Demo Section */}
@@ -83,31 +77,22 @@ export default function Home() {
 
       {/* Programs Section */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">Our Learning Programs</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { title: "Coding & Robotics", icon: "🤖" },
-              { title: "App Development", icon: "📱" },
-              { title: "3D Printing", icon: "🖨️" },
-              { title: "Drone Technology", icon: "🚁" },
-              { title: "Web Development", icon: "💻" },
-              { title: "Entrepreneurship", icon: "💼" },
-            ].map((program, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6">
-                <div className="text-4xl mb-4">{program.icon}</div>
-                <h3 className="text-xl font-semibold mb-2">{program.title}</h3>
-                <p className="text-gray-600">
-                  Hands-on learning experience with real-world projects and expert guidance.
-                </p>
-                <Link href={`/program/${index}`} className="text-sky-500 font-medium mt-4 inline-block hover:underline">
-                  Learn more →
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+  <div className="container mx-auto px-4">
+    <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">Our Learning Programs</h2>
+    <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
+      {programs.map((program, index) => (
+        <ProgramCard 
+          key={index}
+          title={program.title}
+          image={program.image}
+          description={program.description}
+          link={program.link}
+        />
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Testimonials */}
       <section className="py-16 bg-white">
