@@ -88,7 +88,18 @@ body {
   * {
     @apply border-border;
   }
-  body {
+  body, html {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    position: fixed;
+    right: -100%;
+    transition: right 0.3s ease-in-out;
+  }
+
+  .navbar.open {
+    right: 0;
   }
 }

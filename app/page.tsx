@@ -36,7 +36,7 @@ export default function Home() {
                 className="inline-flex items-center gap-2 bg-sky-400 hover:bg-sky-500 text-white px-6 py-3 rounded-full transition-colors"
               >
                 <WhatsappIcon size={20} />
-                WhatsApp Us
+                WhatsApp
               </Link>
             </div>
             <div className="order-1 md:order-2 relative">
@@ -142,7 +142,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-xl font-bold mb-4">Youngovator</h3>
               <p className="text-gray-400 mb-4">India's leading phygital learning platform for young innovators.</p>
@@ -227,11 +227,6 @@ export default function Home() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/franchise" className="text-gray-400 hover:text-white">
-                    Franchise
-                  </Link>
-                </li>
-                <li>
                   <Link href="/school-lab" className="text-gray-400 hover:text-white">
                     School Lab Setup
                   </Link>
@@ -299,23 +294,9 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <div>
-              <h4 className="font-semibold mb-4">Newsletter</h4>
-              <p className="text-gray-400 mb-4">Subscribe to our newsletter for the latest updates.</p>
-              <form className="flex">
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="px-4 py-2 rounded-l-md w-full focus:outline-none text-gray-800"
-                />
-                <button type="submit" className="bg-sky-500 hover:bg-sky-600 px-4 py-2 rounded-r-md transition-colors">
-                  Subscribe
-                </button>
-              </form>
-            </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>© {new Date().getFullYear()} Youngovator. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Nitinify. All rights reserved.</p>
           </div>
         </div>
       </footer>
