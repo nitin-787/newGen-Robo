@@ -4,24 +4,22 @@ import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
+import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 
 const navLinks = [
-  { href: "/", label: "Home", active: true },
+  { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  // { href: "/franchise", label: "Open a Franchise" },
   { href: "/school-lab", label: "School Lab Setup" },
   { href: "/center", label: "Learn at a Center" },
   { href: "/contact", label: "Contact" },
-  // { href: "/more", label: "More" },
 ]
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const pathname = usePathname()
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
   return (
     <div className="container mx-auto px-4 py-3 flex items-center justify-between relative">
@@ -35,7 +33,9 @@ export default function Navigation() {
             priority
           />
         </div>
-        <span className="text-xs text-gray-500 hidden sm:inline-block">Backed by AWADH, IT Ropar</span>
+        <span className="text-xs text-gray-500 hidden sm:inline-block">
+          Backed by AWADH, IT Ropar
+        </span>
       </Link>
 
       {/* Desktop Navigation */}
@@ -46,7 +46,7 @@ export default function Navigation() {
             href={link.href}
             className={cn(
               "text-gray-700 hover:text-sky-500 transition-colors",
-              link.active && "text-sky-500 font-medium",
+              pathname === link.href && "text-sky-500 font-medium"
             )}
           >
             {link.label}
@@ -64,7 +64,7 @@ export default function Navigation() {
       <div
         className={cn(
           "fixed inset-0 bg-white z-10 flex flex-col pt-20 px-6 transition-transform duration-300 ease-in-out md:hidden",
-          isMenuOpen ? "translate-x-0" : "translate-x-full",
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
         <nav className="flex flex-col gap-4">
@@ -74,10 +74,10 @@ export default function Navigation() {
               href={link.href}
               className={cn(
                 "text-gray-700 hover:text-sky-500 transition-colors py-2 text-lg border-b border-gray-100",
-                link.active && "text-sky-500 font-medium",
+                pathname === link.href && "text-sky-500 font-medium"
               )}
               onClick={() => setIsMenuOpen(false)}
->
+            >
               {link.label}
             </Link>
           ))}
@@ -87,7 +87,8 @@ export default function Navigation() {
           <Link
             href="/contact"
             className="bg-sky-500 text-white py-3 px-6 rounded-full w-full block text-center"
-            onClick={() => setIsMenuOpen(false)}>
+            onClick={() => setIsMenuOpen(false)}
+          >
             Contact Us
           </Link>
         </div>
