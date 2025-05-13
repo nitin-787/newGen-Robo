@@ -51,7 +51,7 @@ export default function LearnAtCenter() {
                   key={idx}
                   className="bg-white flex items-center gap-3 p-4 rounded-xl shadow-md"
                 >
-                  <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
+                  <div className="w-8 h-8 bg-gradient-to-br from-sky-500 to-purple-500 rounded-full flex items-center justify-center">
                     <svg
                       className="text-white w-4 h-4"
                       fill="currentColor"
@@ -111,7 +111,7 @@ export default function LearnAtCenter() {
             <div className="col-span-1 md:col-span-3">
               <button
                 type="submit"
-                className="w-full bg-[#001f54] text-white font-semibold py-3 rounded-full hover:bg-[#003580] transition"
+                className="w-full bg-sky-500 text-white font-semibold py-3 rounded-full hover:bg-sky-600 transition"
               >
                 Submit
               </button>

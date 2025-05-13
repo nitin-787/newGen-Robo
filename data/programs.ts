@@ -1,7 +1,7 @@
 const programs = [
     {
       title: "Coding & Robotics",
-      image: "innovation-lab.jpg",
+      image: "/placeholder.svg?height=200&width=300",
       description: "In recent years, Drone technology has become an epitome of progress in the fields" +
         " of operations management, 3-D mapping, mining, transportation, and surveillance. In recent years, " +  
        "Drone technology has become an epitome of progress in the fields of operations management, 3-D mapping, mining, transportation, and surveillance. In recent years, ",
@@ -9,7 +9,7 @@ const programs = [
     },
     {
       title: "App Development",
-      image: "innovation-lab.jpg",
+      image: "/placeholder.svg?height=200&width=300",
       description: "In recent years, Drone technology has become an epitome of progress in the fields" +
         " of operations management, 3-D mapping, mining, transportation, and surveillance. In recent years, " +  
        "Drone technology has become an epitome of progress in the fields of operations management, 3-D mapping, mining, transportation, and surveillance. In recent years, ",
@@ -17,7 +17,7 @@ const programs = [
     },
     {
       title: "3D Printing",
-      image: "innovation-lab.jpg",
+      image: "/placeholder.svg?height=200&width=300",
       description: "In recent years, Drone technology has become an epitome of progress in the fields" +
         " of operations management, 3-D mapping, mining, transportation, and surveillance. In recent years, " +  
        "Drone technology has become an epitome of progress in the fields of operations management, 3-D mapping, mining, transportation, and surveillance. In recent years, ",
@@ -25,7 +25,7 @@ const programs = [
     },
     {
       title: "Drone Technology",
-      image: "innovation-lab.jpg",
+      image: "/placeholder.svg?height=200&width=300",
       description: "In recent years, Drone technology has become an epitome of progress in the fields" +
         " of operations management, 3-D mapping, mining, transportation, and surveillance. In recent years, " +  
        "Drone technology has become an epitome of progress in the fields of operations management, 3-D mapping, mining, transportation, and surveillance. In recent years, ",
@@ -33,7 +33,7 @@ const programs = [
     },
     {
       title: "Web Development",
-      image: "innovation-lab.jpg",
+      image: "/placeholder.svg?height=200&width=300",
       description: "In recent years, Drone technology has become an epitome of progress in the fields" +
         " of operations management, 3-D mapping, mining, transportation, and surveillance. In recent years, " +  
        "Drone technology has become an epitome of progress in the fields of operations management, 3-D mapping, mining, transportation, and surveillance. In recent years, ",
@@ -41,7 +41,7 @@ const programs = [
     },
     {
       title: "Entrepreneurship",
-      image: "innovation-lab.jpg",
+      image: "/placeholder.svg?height=200&width=300",
       description: "In recent years, Drone technology has become an epitome of progress in the fields" +
         " of operations management, 3-D mapping, mining, transportation, and surveillance. In recent years, " +  
        "Drone technology has become an epitome of progress in the fields of operations management, 3-D mapping, mining, transportation, and surveillance. In recent years, ",
