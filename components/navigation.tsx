@@ -22,9 +22,10 @@ export default function Navigation() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
   return (
-    <div className="container mx-auto px-4 py-3 flex items-center justify-between relative">
-      <Link href="/" className="flex items-center gap-2 z-20">
-        <div className="relative h-12 w-48">
+    <div className="container mx-auto px-4 py-4 flex items-center justify-between relative">
+      {/* Logo + Tagline */}
+      <Link href="/" className="flex items-center gap-2 z-30">
+        <div className="relative h-10 w-40">
           <Image
             src="/placeholder.svg?height=60&width=200"
             alt="Youngovator Logo"
@@ -33,20 +34,20 @@ export default function Navigation() {
             priority
           />
         </div>
-        <span className="text-xs text-gray-500 hidden sm:inline-block">
-          Backed by AWADH, IT Ropar
+        <span className="text-xl text-gray-500 hidden lg:inline-block">
+          Backed by AWADH, IIT Ropar
         </span>
       </Link>
 
-      {/* Desktop Navigation */}
+      {/* Desktop Menu */}
       <nav className="hidden md:flex items-center gap-6">
         {navLinks.map((link) => (
           <Link
             key={link.label}
             href={link.href}
             className={cn(
-              "text-gray-700 hover:text-sky-500 transition-colors",
-              pathname === link.href && "text-sky-500 font-medium"
+              "text-lg font-medium text-gray-600 hover:text-sky-500 transition-colors duration-200",
+              pathname === link.href && "text-sky-600 font-semibold underline underline-offset-4"
             )}
           >
             {link.label}
@@ -54,42 +55,41 @@ export default function Navigation() {
         ))}
       </nav>
 
-      <div className="flex items-center gap-4 z-20">
-        <button className="md:hidden z-20" onClick={toggleMenu} aria-label="Toggle menu">
-          {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
-      </div>
+      {/* Mobile Menu Button */}
+      <button className="md:hidden z-30" onClick={toggleMenu} aria-label="Toggle menu">
+        {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+      </button>
 
-      {/* Mobile Navigation */}
+      {/* Mobile Overlay Menu */}
       <div
         className={cn(
-          "fixed inset-0 bg-white z-10 flex flex-col pt-20 px-6 transition-transform duration-300 ease-in-out md:hidden",
+          "fixed inset-0 z-20 bg-white/90 backdrop-blur-lg transition-transform duration-300 md:hidden flex flex-col pt-24 px-6",
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
-        <nav className="flex flex-col gap-4">
+        <nav className="flex flex-col gap-6 text-lg">
           {navLinks.map((link) => (
             <Link
               key={link.label}
               href={link.href}
-              className={cn(
-                "text-gray-700 hover:text-sky-500 transition-colors py-2 text-lg border-b border-gray-100",
-                pathname === link.href && "text-sky-500 font-medium"
-              )}
               onClick={() => setIsMenuOpen(false)}
+              className={cn(
+                "border-b pb-2 border-gray-200 text-gray-700 hover:text-sky-500 transition-colors",
+                pathname === link.href && "text-sky-600 font-semibold"
+              )}
             >
               {link.label}
             </Link>
           ))}
         </nav>
 
-        <div className="mt-auto mb-8 pt-6">
+        <div className="mt-auto mb-8 pt-8">
           <Link
             href="/contact"
-            className="bg-sky-500 text-white py-3 px-6 rounded-full w-full block text-center"
+            className="w-full text-center block bg-sky-500 text-white py-3 rounded-full hover:bg-sky-600 transition"
             onClick={() => setIsMenuOpen(false)}
           >
-            Contact Us
+            Get in Touch
           </Link>
         </div>
       </div>

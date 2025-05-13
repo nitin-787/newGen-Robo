@@ -31,21 +31,16 @@ export default function AboutPage() {
             <h2 className="text-2xl font-bold mb-4">Innovative Learning</h2>
             <p className="text-gray-700">
               At our innovation lab, students explore real-world tech like
-              robotics and AI hands-on.
-              At our innovation lab, students explore real-world tech like
-              robotics and AI hands-on.
-              At our innovation lab, students explore real-world tech like
-              robotics and AI hands-on.
-              At our innovation lab, students explore real-world tech like
-              robotics and AI hands-on.
-              At our innovation lab, students explore real-world tech like
-              robotics and AI hands-on.
-              At our innovation lab, students explore real-world tech like
-              robotics and AI hands-on.
-              At our innovation lab, students explore real-world tech like
-              robotics and AI hands-on.
-              At our innovation lab, students explore real-world tech like
-              robotics and AI hands-on.
+              robotics and AI hands-on. At our innovation lab, students explore
+              real-world tech like robotics and AI hands-on. At our innovation
+              lab, students explore real-world tech like robotics and AI
+              hands-on. At our innovation lab, students explore real-world tech
+              like robotics and AI hands-on. At our innovation lab, students
+              explore real-world tech like robotics and AI hands-on. At our
+              innovation lab, students explore real-world tech like robotics and
+              AI hands-on. At our innovation lab, students explore real-world
+              tech like robotics and AI hands-on. At our innovation lab,
+              students explore real-world tech like robotics and AI hands-on.
             </p>
           </div>
           <div className="rounded-md overflow-hidden shadow-md border border-gray-200 w-[500px] h-[300px]">
@@ -74,26 +69,22 @@ export default function AboutPage() {
             <h2 className="text-2xl font-bold mb-4">Hands-on Practice</h2>
             <p className="text-gray-700">
               Students engage in practical projects that encourage creativity,
-              critical thinking, and problem solving.
+              critical thinking, and problem solving. Students engage in
+              practical projects that encourage creativity, critical thinking,
+              and problem solving. Students engage in practical projects that
+              encourage creativity, critical thinking, and problem solving.
               Students engage in practical projects that encourage creativity,
-              critical thinking, and problem solving.
-              Students engage in practical projects that encourage creativity,
-              critical thinking, and problem solving.
-              Students engage in practical projects that encourage creativity,
-              critical thinking, and problem solving.
-              At our innovation lab, students explore real-world tech like
-              robotics and AI hands-on.
-              At our innovation lab, students explore real-world tech like
-              robotics and AI hands-on.
-              At our innovation lab, students explore real-world tech like
-              robotics and AI hands-on.
-              At our innovation lab, students explore real-world tech like
-              robotics and AI hands-on.
+              critical thinking, and problem solving. At our innovation lab,
+              students explore real-world tech like robotics and AI hands-on. At
+              our innovation lab, students explore real-world tech like robotics
+              and AI hands-on. At our innovation lab, students explore
+              real-world tech like robotics and AI hands-on. At our innovation
+              lab, students explore real-world tech like robotics and AI
+              hands-on.
             </p>
           </div>
         </div>
       </section>
-
 
       {/* Footer */}
       <section>

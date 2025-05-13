@@ -1,12 +1,12 @@
-import Image from "next/image"
-import Link from "next/link"
-import { PhoneIcon as WhatsappIcon } from "lucide-react"
-import RequestDemoForm from "@/components/request-demo-form"
-import Navigation from "@/components/navigation"
-import InnovationLabShowCase from "@/components/innovation-lab-show-case"
-import ProgramCard from "@/components/program-card"
-import programs from "@/data/programs"
-import Footer from "@/components/footer"
+import Image from "next/image";
+import Link from "next/link";
+import { PhoneIcon as WhatsappIcon } from "lucide-react";
+import RequestDemoForm from "@/components/request-demo-form";
+import Navigation from "@/components/navigation";
+import InnovationLabShowCase from "@/components/innovation-lab-show-case";
+import ProgramCard from "@/components/program-card";
+import programs from "@/data/programs";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -25,12 +25,14 @@ export default function Home() {
             <div className="order-2 md:order-1">
               <p className="text-gray-600 mb-2">Welcome to</p>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                India&apos;s Leading Phygital Learning Platform for Young Innovators
+                India&apos;s Leading Phygital Learning Platform for Young
+                Innovators
               </h1>
               <p className="text-gray-700 mb-8 max-w-lg">
-                If you&apos;re a budding inventor of age 8+ years, we provide the perfect online & offline platform for
-                learning new age Tech Skills like Coding, Robotics, Drone, 3D Printing, App & Web development, along
-                with Entrepreneurship and Financial Literacy.
+                If you&apos;re a budding inventor of age 8+ years, we provide
+                the perfect online & offline platform for learning new age Tech
+                Skills like Coding, Robotics, Drone, 3D Printing, App & Web
+                development, along with Entrepreneurship and Financial Literacy.
               </p>
               <Link
                 href="https://wa.me/1234567890"
@@ -67,61 +69,66 @@ export default function Home() {
       </section>
 
       {/* Student & Parent Showcase Section */}
-<section className="py-16 bg-sky-50">
-  <div className="container mx-auto px-4">
-    <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
-      Hear what our Students & Parents have to say...
-    </h2>
-    
-    {/* Top grid with video and quote image */}
-    <div className="grid md:grid-cols-4 gap-6 mb-12">
-      <div className="md:col-span-1 flex flex-col items-center text-center">
-        <Image
-          src="/placeholder.svg"
-          alt="Student Parent Feedback"
-          width={300}
-          height={200}
-          className="rounded-xl shadow-lg"
-        />
-      </div>
-      <div className="md:col-span-3 grid sm:grid-cols-3 gap-4">
-        {["https://www.youtube.com/embed/mBHTXQo65p8?si=6Skd80jMrsTMpwds", 
-          "https://www.youtube.com/embed/u2Hletfrp94?si=q_Bbt2fJnkPtAJ8_", 
-          "https://www.youtube.com/embed/eP_0yz605Sw?si=EomOnGfH8VVWo2CG"].map((src, i) => (
-          <div key={i} className="aspect-w-16 aspect-h-9">
-            <iframe
-              src={src}
-              title={`Student Video ${i + 1}`}
-              className="rounded-lg w-full h-full"
-              allowFullScreen
-            />
+      <section className="py-16 bg-sky-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
+            Hear what our Students & Parents have to say...
+          </h2>
+
+          {/* Top grid with video and quote image */}
+          <div className="grid md:grid-cols-4 gap-6 mb-12">
+            <div className="md:col-span-1 flex flex-col items-center text-center">
+              <Image
+                src="/placeholder.svg"
+                alt="Student Parent Feedback"
+                width={300}
+                height={200}
+                className="rounded-xl shadow-lg"
+              />
+            </div>
+            <div className="md:col-span-3 grid sm:grid-cols-3 gap-4">
+              {[
+                "https://www.youtube.com/embed/mBHTXQo65p8?si=6Skd80jMrsTMpwds",
+                "https://www.youtube.com/embed/u2Hletfrp94?si=q_Bbt2fJnkPtAJ8_",
+                "https://www.youtube.com/embed/eP_0yz605Sw?si=EomOnGfH8VVWo2CG",
+              ].map((src, i) => (
+                <div key={i} className="aspect-w-16 aspect-h-9">
+                  <iframe
+                    src={src}
+                    title={`Student Video ${i + 1}`}
+                    className="rounded-lg w-full h-full"
+                    allowFullScreen
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-        ))}
-      </div>
-    </div>
 
-    {/* Bottom grid with event photos */}
-    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      {["photo1.jpg", "photo2.jpg", "photo3.jpg", "photo4.jpg"].map((img, i) => (
-        <Image
-          key={i}
-          src={`/placeholder.svg?height=200&width=300&text=${img}`}
-          alt={`Event ${i + 1}`}
-          width={300}
-          height={200}
-          className="rounded-xl shadow-md object-cover w-full h-48"
-        />
-      ))}
-    </div>
-  </div>
-</section>
-
+          {/* Bottom grid with event photos */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {["photo1.jpg", "photo2.jpg", "photo3.jpg", "photo4.jpg"].map(
+              (img, i) => (
+                <Image
+                  key={i}
+                  src={`/placeholder.svg?height=200&width=300&text=${img}`}
+                  alt={`Event ${i + 1}`}
+                  width={300}
+                  height={200}
+                  className="rounded-xl shadow-md object-cover w-full h-48"
+                />
+              )
+            )}
+          </div>
+        </div>
+      </section>
 
       {/* Request Demo Section */}
       <section className="py-16 bg-gradient-to-b from-white to-sky-50">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="bg-white rounded-2xl shadow-lg p-6 md:p-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">Request a Free Demo Class</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
+              Request a Free Demo Class
+            </h2>
             <RequestDemoForm />
           </div>
         </div>
@@ -129,27 +136,30 @@ export default function Home() {
 
       {/* Programs Section */}
       <section className="py-16">
-  <div className="container mx-auto px-4">
-    <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">Our Learning Programs</h2>
-    <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
-      {programs.map((program, index) => (
-        <ProgramCard 
-          key={index}
-          title={program.title}
-          image={program.image}
-          description={program.description}
-          link={program.link}
-        />
-      ))}
-    </div>
-  </div>
-</section>
-
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
+            Our Learning Programs
+          </h2>
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
+            {programs.map((program, index) => (
+              <ProgramCard
+                key={index}
+                title={program.title}
+                image={program.image}
+                description={program.description}
+                link={program.link}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Testimonials */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">What Our Students Say</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
+            What Our Students Say
+          </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[1, 2, 3].map((item) => (
               <div key={item} className="bg-sky-50 rounded-xl p-6">
@@ -168,8 +178,9 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-gray-700">
-                  "The learning experience at Youngovator has been amazing. I've learned so much about coding and
-                  robotics, and now I'm building my own projects!"
+                  "The learning experience at Youngovator has been amazing. I've
+                  learned so much about coding and robotics, and now I'm
+                  building my own projects!"
                 </p>
                 <div className="flex text-yellow-400 mt-4">
                   {[1, 2, 3, 4, 5].map((star) => (
@@ -193,8 +204,8 @@ export default function Home() {
 
       {/* Footer */}
       <section>
-              <Footer />
-            </section>
+        <Footer />
+      </section>
     </div>
-  )
+  );
 }

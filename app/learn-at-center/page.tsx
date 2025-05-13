@@ -28,13 +28,17 @@ export default function LearnAtCenter() {
 
           {/* Text & Skills */}
           <div className="lg:w-1/2 w-full">
-            <h1 className="text-4xl font-bold text-[#1a1a40] mb-4">Join Innovation Lab</h1>
+            <h1 className="text-4xl font-bold text-[#1a1a40] mb-4">
+              Join Innovation Lab
+            </h1>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              We are thrilled to announce our Science & Robotics Summer Camp for kids aged 8 to 18 years!
-              Prepare to embark on an exciting journey filled with creativity, learning, and fun. Our camp
-              offers a unique blend of activities ranging from building with robotics, science experiments,
-              Coding, App development, drone and 3D printing, all centred around the theme of problem
-              solving and critical thinking.
+              We are thrilled to announce our Science & Robotics Summer Camp for
+              kids aged 8 to 18 years! Prepare to embark on an exciting journey
+              filled with creativity, learning, and fun. Our camp offers a
+              unique blend of activities ranging from building with robotics,
+              science experiments, Coding, App development, drone and 3D
+              printing, all centred around the theme of problem solving and
+              critical thinking.
             </p>
 
             <h2 className="text-3xl font-bold text-[#1a1a40] mb-4">Skills</h2>
@@ -71,20 +75,46 @@ export default function LearnAtCenter() {
       {/* Application Form */}
       <section className="container mx-auto px-4 py-12">
         <div className="bg-white p-8 rounded-2xl shadow-xl max-w-5xl mx-auto">
-          <h2 className="text-2xl font-bold text-[#1a1a40] mb-6">Submit Your Application</h2>
+          <h2 className="text-2xl font-bold text-[#1a1a40] mb-6">
+            Submit Your Application
+          </h2>
           <form className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Basic Fields */}
-            <input type="text" placeholder="Full Name *" required className="col-span-1 border border-gray-300 p-3 rounded-md" />
-            <input type="tel" placeholder="Phone *" required className="col-span-1 border border-gray-300 p-3 rounded-md" />
-            <input type="email" placeholder="Email *" required className="col-span-1 border border-gray-300 p-3 rounded-md" />
+            <input
+              type="text"
+              placeholder="Full Name *"
+              required
+              className="col-span-1 border border-gray-300 p-3 rounded-md"
+            />
+            <input
+              type="tel"
+              placeholder="Phone *"
+              required
+              className="col-span-1 border border-gray-300 p-3 rounded-md"
+            />
+            <input
+              type="email"
+              placeholder="Email *"
+              required
+              className="col-span-1 border border-gray-300 p-3 rounded-md"
+            />
 
             {/* Learn Options */}
             <div className="col-span-1">
               <p className="font-medium mb-2">Want to Learn *</p>
-              {["Coding", "Robotics", "Drone & 3D Printing", "App development", "Entrepreneurship", "All"].map((label, idx) => (
+              {[
+                "Coding",
+                "Robotics",
+                "Drone & 3D Printing",
+                "App development",
+                "Entrepreneurship",
+                "All",
+              ].map((label, idx) => (
                 <div key={idx} className="flex items-center mb-1">
                   <input type="checkbox" id={`learn-${idx}`} className="mr-2" />
-                  <label htmlFor={`learn-${idx}`} className="text-gray-700">{label}</label>
+                  <label htmlFor={`learn-${idx}`} className="text-gray-700">
+                    {label}
+                  </label>
                 </div>
               ))}
             </div>
@@ -99,12 +129,20 @@ export default function LearnAtCenter() {
             {/* Apply For */}
             <div className="col-span-1">
               <p className="font-medium mb-2">Apply for *</p>
-              {["Summer Camp", "6 Month Module", "Year Long Module"].map((option, idx) => (
-                <div key={idx} className="flex items-center mb-1">
-                  <input type="checkbox" id={`apply-${idx}`} className="mr-2" />
-                  <label htmlFor={`apply-${idx}`} className="text-gray-700">{option}</label>
-                </div>
-              ))}
+              {["Summer Camp", "6 Month Module", "Year Long Module"].map(
+                (option, idx) => (
+                  <div key={idx} className="flex items-center mb-1">
+                    <input
+                      type="checkbox"
+                      id={`apply-${idx}`}
+                      className="mr-2"
+                    />
+                    <label htmlFor={`apply-${idx}`} className="text-gray-700">
+                      {option}
+                    </label>
+                  </div>
+                )
+              )}
             </div>
 
             {/* Submit Button */}

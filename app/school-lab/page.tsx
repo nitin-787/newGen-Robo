@@ -22,7 +22,9 @@ export default function SchoolLabSetup() {
               </h2>
               <form className="space-y-4">
                 <div>
-                  <label htmlFor="full-name" className="block text-gray-700">Full Name</label>
+                  <label htmlFor="full-name" className="block text-gray-700">
+                    Full Name
+                  </label>
                   <input
                     type="text"
                     id="full-name"
@@ -33,7 +35,9 @@ export default function SchoolLabSetup() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block text-gray-700">Phone</label>
+                  <label htmlFor="phone" className="block text-gray-700">
+                    Phone
+                  </label>
                   <input
                     type="tel"
                     id="phone"
@@ -44,7 +48,9 @@ export default function SchoolLabSetup() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-gray-700">Email</label>
+                  <label htmlFor="email" className="block text-gray-700">
+                    Email
+                  </label>
                   <input
                     type="email"
                     id="email"
@@ -55,7 +61,9 @@ export default function SchoolLabSetup() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="city" className="block text-gray-700">City in which you want to start</label>
+                  <label htmlFor="city" className="block text-gray-700">
+                    City in which you want to start
+                  </label>
                   <input
                     type="text"
                     id="city"
@@ -66,7 +74,9 @@ export default function SchoolLabSetup() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="investment" className="block text-gray-700">Investment Planned</label>
+                  <label htmlFor="investment" className="block text-gray-700">
+                    Investment Planned
+                  </label>
                   <input
                     type="text"
                     id="investment"
@@ -137,17 +147,20 @@ export default function SchoolLabSetup() {
               </li>
               <li>
                 <span className="bg-pink-100 text-pink-800 px-3 py-1 rounded">
-                  Support in setting up high-tech state of art infrastructure / Innovation lab in the school
+                  Support in setting up high-tech state of art infrastructure /
+                  Innovation lab in the school
                 </span>
               </li>
               <li>
                 <span className="bg-sky-100 text-sky-800 px-3 py-1 rounded">
-                  Help in organising school level / district level robotics related event in the campus
+                  Help in organising school level / district level robotics
+                  related event in the campus
                 </span>
               </li>
               <li>
                 <span className="bg-pink-100 text-pink-800 px-3 py-1 rounded">
-                  Exclusive shout-out to partners during our National level Innovation Carnival
+                  Exclusive shout-out to partners during our National level
+                  Innovation Carnival
                 </span>
               </li>
               <li>
