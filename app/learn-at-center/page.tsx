@@ -16,18 +16,20 @@ export default function LearnAtCenter() {
       <section className="container mx-auto px-4 py-12">
         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-10">
           {/* Image */}
-          <div className="lg:w-1/2 w-full">
-            <Image
-              src="/placeholder.svg"
-              alt="Student with robotics kit"
-              width={600}
-              height={400}
-              className="rounded-lg shadow-lg w-full h-auto"
-            />
-          </div>
+          <div className="w-full lg:w-1/2 flex justify-center">
+          <Image
+            src="/assets/images/learn-at-center.jpeg"
+            alt="Student with robotics kit"
+            width={835}
+            height={730}
+            className="rounded-lg w-full h-auto max-h-[700px] object-contain"
+            sizes="(min-width: 1024px) 835px, 100vw"
+          />
+        </div>
+
 
           {/* Text & Skills */}
-          <div className="lg:w-1/2 w-full">
+          <div className="w-full lg:w-1/2">
             <h1 className="text-4xl font-bold text-[#1a1a40] mb-4">
               Join Innovation Lab
             </h1>

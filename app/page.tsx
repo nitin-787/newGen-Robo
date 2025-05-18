@@ -75,37 +75,30 @@ export default function Home() {
             Hear what our Students & Parents have to say...
           </h2>
 
-          {/* Top grid with video and quote image */}
-          <div className="grid md:grid-cols-4 gap-6 mb-12">
-            <div className="md:col-span-1 flex flex-col items-center text-center">
-              <Image
-                src="/placeholder.svg"
-                alt="Student Parent Feedback"
-                width={300}
-                height={200}
-                className="rounded-xl shadow-lg"
+          {/* Top grid with video */}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+           {[
+            "/assets/videos/promo-vid-1.mp4",
+            "/assets/videos/promo-vid-2.mp4",
+            "/assets/videos/promo-vid-3.mp4",
+            "/assets/videos/promo-vid-3.mp4",
+           ].map((src, i) => (
+            <div key={i} className="aspect-video rounded-xl shadow-lg overflow-hidden">
+              <video
+                src={src}
+                controls
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-cover"
               />
             </div>
-            <div className="md:col-span-3 grid sm:grid-cols-3 gap-4">
-              {[
-                "https://www.youtube.com/embed/mBHTXQo65p8?si=6Skd80jMrsTMpwds",
-                "https://www.youtube.com/embed/u2Hletfrp94?si=q_Bbt2fJnkPtAJ8_",
-                "https://www.youtube.com/embed/eP_0yz605Sw?si=EomOnGfH8VVWo2CG",
-              ].map((src, i) => (
-                <div key={i} className="aspect-w-16 aspect-h-9">
-                  <iframe
-                    src={src}
-                    title={`Student Video ${i + 1}`}
-                    className="rounded-lg w-full h-full"
-                    allowFullScreen
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
+           ))}
+           </div>
 
           {/* Bottom grid with event photos */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
             {["photo1.jpg", "photo2.jpg", "photo3.jpg", "photo4.jpg"].map(
               (img, i) => (
                 <Image
