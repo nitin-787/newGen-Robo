@@ -1,14 +1,23 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { PhoneIcon as WhatsappIcon } from "lucide-react";
+import { motion } from "framer-motion";
 import RequestDemoForm from "@/components/request-demo-form";
 import Navigation from "@/components/navigation";
 import InnovationLabShowCase from "@/components/innovation-lab-show-case";
 import ProgramCard from "@/components/program-card";
 import programs from "@/data/programs";
 import Footer from "@/components/footer";
+import StudentParentShowcase from "@/components/student-parent";
 
 export default function Home() {
+  const fadeInUp = {
+    initial: { opacity: 0, y: 40 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.9, ease: "easeOut" },
+  };
+
   return (
     <div className="min-h-screen bg-sky-50">
       {/* Navigation */}
@@ -19,14 +28,13 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="py-12 md:py-20">
+      <motion.section {...fadeInUp} className="py-12 md:py-20">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="order-2 md:order-1">
               <p className="text-gray-600 mb-2">Welcome to</p>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                India&apos;s Leading Phygital Learning Platform for Young
-                Innovators
+                India&apos;s Leading Phygital Learning Platform for Young Innovators
               </h1>
               <p className="text-gray-700 mb-8 max-w-lg">
                 If you&apos;re a budding inventor of age 8+ years, we provide
@@ -61,62 +69,19 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      {/* innovation lab showcase section */}
-      <section className="py-16">
+      {/* Innovation Lab Showcase */}
+      <motion.section {...fadeInUp} className="py-16">
         <InnovationLabShowCase />
-      </section>
+      </motion.section>
 
-      {/* Student & Parent Showcase Section */}
-      <section className="py-16 bg-sky-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
-            Hear what our Students & Parents have to say...
-          </h2>
-
-          {/* Top grid with video */}
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-           {[
-            "/assets/videos/promo-vid-1.mp4",
-            "/assets/videos/promo-vid-2.mp4",
-            "/assets/videos/promo-vid-3.mp4",
-            "/assets/videos/promo-vid-3.mp4",
-           ].map((src, i) => (
-            <div key={i} className="aspect-video rounded-xl shadow-lg overflow-hidden">
-              <video
-                src={src}
-                controls
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full h-full object-cover"
-              />
-            </div>
-           ))}
-           </div>
-
-          {/* Bottom grid with event photos */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-            {["photo1.jpg", "photo2.jpg", "photo3.jpg", "photo4.jpg"].map(
-              (img, i) => (
-                <Image
-                  key={i}
-                  src={`/placeholder.svg?height=200&width=300&text=${img}`}
-                  alt={`Event ${i + 1}`}
-                  width={300}
-                  height={200}
-                  className="rounded-xl shadow-md object-cover w-full h-48"
-                />
-              )
-            )}
-          </div>
-        </div>
-      </section>
+      {/* Student & Parent Showcase */}
+      
+      <StudentParentShowcase />
 
       {/* Request Demo Section */}
-      <section className="py-16 bg-gradient-to-b from-white to-sky-50">
+      <motion.section {...fadeInUp} className="py-16 bg-gradient-to-b from-white to-sky-50">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="bg-white rounded-2xl shadow-lg p-6 md:p-10">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
@@ -125,37 +90,51 @@ export default function Home() {
             <RequestDemoForm />
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Programs Section */}
-      <section className="py-16">
+      <motion.section {...fadeInUp} className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
             Our Learning Programs
           </h2>
           <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
             {programs.map((program, index) => (
-              <ProgramCard
+              <motion.div
                 key={index}
-                title={program.title}
-                image={program.image}
-                description={program.description}
-                link={program.link}
-              />
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.15 }}
+              >
+                <ProgramCard
+                  title={program.title}
+                  image={program.image}
+                  description={program.description}
+                  link={program.link}
+                />
+              </motion.div>
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Testimonials */}
-      <section className="py-16 bg-white">
+      <motion.section {...fadeInUp} className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
             What Our Students Say
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[1, 2, 3].map((item) => (
-              <div key={item} className="bg-sky-50 rounded-xl p-6">
+              <motion.div
+                key={item}
+                className="bg-sky-50 rounded-xl p-6"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: item * 0.15 }}
+              >
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 rounded-full overflow-hidden">
                     <Image
@@ -189,11 +168,11 @@ export default function Home() {
                     </svg>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Footer */}
       <section>
