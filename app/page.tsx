@@ -78,7 +78,8 @@ export default function Home() {
 
       {/* Student & Parent Showcase */}
       
-      <StudentParentShowcase />
+        <StudentParentShowcase></StudentParentShowcase>
+
 
       {/* Request Demo Section */}
       <motion.section {...fadeInUp} className="py-16 bg-gradient-to-b from-white to-sky-50">
