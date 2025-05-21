@@ -102,29 +102,37 @@ export default function SchoolLabSetup() {
               <h2 className="text-2xl sm:text-3xl font-bold text-center">
                 Open an Innovation Lab at your school with Youngovator
               </h2>
+
+              {/* First row of images */}
               <div className="grid grid-cols-2 gap-4 w-full">
-                <img
-                  src="/placeholder.svg"
-                  alt="Lab Setup 1"
-                  className="w-full h-auto rounded-lg shadow-md object-cover"
-                />
-                <img
-                  src="/placeholder.svg"
-                  alt="Lab Setup 2"
-                  className="w-full h-auto rounded-lg shadow-md object-cover"
-                />
+                {["school-lab-1", "school-lab-2"].map((img, i) => (
+                  <div
+                    key={i}
+                    className="relative w-full aspect-square rounded-lg overflow-hidden shadow-md"
+                  >
+                    <img
+                      src={`/assets/images/${img}.jpeg`}
+                      alt={`Lab Setup ${i + 1}`}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
               </div>
+
+              {/* Second row of images */}
               <div className="grid grid-cols-2 gap-4 w-full">
-                <img
-                  src="/placeholder.svg"
-                  alt="Lab Setup 1"
-                  className="w-full h-auto rounded-lg shadow-md object-cover"
-                />
-                <img
-                  src="/placeholder.svg"
-                  alt="Lab Setup 2"
-                  className="w-full h-auto rounded-lg shadow-md object-cover"
-                />
+                {["school-lab-3", "school-lab-4"].map((img, i) => (
+                  <div
+                    key={i}
+                    className="relative w-full aspect-square rounded-lg overflow-hidden shadow-md"
+                  >
+                    <img
+                      src={`/assets/images/${img}.jpeg`}
+                      alt={`Lab Setup ${i + 3}`}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -179,7 +187,7 @@ export default function SchoolLabSetup() {
           {/* Right Column: Image */}
           <div className="flex justify-center">
             <img
-              src="/placeholder.svg"
+              src="/assets/images/students.jpeg"
               alt="Students with Innovation Lab"
               className="rounded-lg shadow-lg max-w-xs sm:max-w-sm w-full"
             />

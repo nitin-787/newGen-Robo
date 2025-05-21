@@ -88,7 +88,8 @@ body {
   * {
     @apply border-border;
   }
-  body, html {
+  body,
+  html {
     @apply bg-background text-foreground;
     overflow-x: hidden;
   }
@@ -105,9 +106,18 @@ body {
 
   .hide-scrollbar {
     -ms-overflow-style: none;
-    scrollbar-width: none;  
+    scrollbar-width: none;
   }
   .hide-scrollbar::-webkit-scrollbar {
-    display: none;  
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
   }
 }

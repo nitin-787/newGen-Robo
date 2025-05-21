@@ -1,25 +1,25 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { Menu, X } from "lucide-react"
-import { usePathname } from "next/navigation"
-import { cn } from "@/lib/utils"
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/school-lab", label: "School Lab Setup" },
   { href: "/learn-at-center", label: "Learn at a Center" },
-  { href: "/contact", label: "Contact" },
-]
+  // { href: "/contact", label: "Contact" },
+];
 
 export default function Navigation() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const pathname = usePathname()
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
     <div className="container mx-auto px-4 py-4 flex items-center justify-between relative">
@@ -27,16 +27,13 @@ export default function Navigation() {
       <Link href="/" className="flex items-center gap-2 z-30">
         <div className="relative h-10 w-40">
           <Image
-            src="/placeholder.svg?height=60&width=200"
-            alt="Youngovator Logo"
+            src="/assets/images/new-gen-robo-logo.jpeg"
+            alt="new gen robo logo"
             fill
             className="object-contain"
             priority
           />
         </div>
-        <span className="text-xl text-gray-500 hidden lg:inline-block">
-          Backed by AWADH, IIT Ropar
-        </span>
       </Link>
 
       {/* Desktop Menu */}
@@ -47,7 +44,8 @@ export default function Navigation() {
             href={link.href}
             className={cn(
               "text-lg font-medium text-gray-600 hover:text-sky-500 transition-colors duration-200",
-              pathname === link.href && "text-sky-600 font-semibold underline underline-offset-4"
+              pathname === link.href &&
+                "text-sky-600 font-semibold underline underline-offset-4"
             )}
           >
             {link.label}
@@ -56,7 +54,11 @@ export default function Navigation() {
       </nav>
 
       {/* Mobile Menu Button */}
-      <button className="md:hidden z-30" onClick={toggleMenu} aria-label="Toggle menu">
+      <button
+        className="md:hidden z-30"
+        onClick={toggleMenu}
+        aria-label="Toggle menu"
+      >
         {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
       </button>
 
@@ -94,5 +96,5 @@ export default function Navigation() {
         </div>
       </div>
     </div>
-  )
+  );
 }

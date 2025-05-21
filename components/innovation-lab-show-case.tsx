@@ -1,16 +1,16 @@
-import Image from "next/image"
-import { Badge } from "@/components/ui/badge"
+import Image from "next/image";
+import { Badge } from "@/components/ui/badge";
 
 export default function InnovationLabShowcase() {
   return (
-    <div className="w-full bg-amber-200">
+    <div className="w-full bg-[#e9f0f8]">
       <div className="container mx-auto py-8 px-4 sm:px-6 lg:py-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Image */}
           <div className="lg:col-span-5">
             <div className="rounded-lg overflow-hidden shadow-md">
               <Image
-                src="/innovation-lab.jpg"
+                src="/assets/images/showcase.jpeg"
                 alt="SHARD's AI, Robotics & Innovation Lab"
                 width={800}
                 height={450}
@@ -26,9 +26,10 @@ export default function InnovationLabShowcase() {
             </h2>
 
             <p className="text-gray-700 text-base sm:text-lg">
-              Transforming education through hands-on AI, Robotics, and Coding learning. Empowering students with
-              cutting-edge technology, interactive DIY kits, practical projects, and an annual innovation fest to shape
-              future innovators.
+              Transforming education through hands-on AI, Robotics, and Coding
+              learning. Empowering students with cutting-edge technology,
+              interactive DIY kits, practical projects, and an annual innovation
+              fest to shape future innovators.
             </p>
 
             <div className="flex flex-wrap gap-2">
@@ -52,5 +53,5 @@ export default function InnovationLabShowcase() {
         </div>
       </div>
     </div>
-  )
+  );
 }

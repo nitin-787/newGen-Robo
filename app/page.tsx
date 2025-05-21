@@ -34,7 +34,8 @@ export default function Home() {
             <div className="order-2 md:order-1">
               <p className="text-gray-600 mb-2">Welcome to</p>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                India&apos;s Leading Phygital Learning Platform for Young Innovators
+                India&apos;s Leading Phygital Learning Platform for Young
+                Innovators
               </h1>
               <p className="text-gray-700 mb-8 max-w-lg">
                 If you&apos;re a budding inventor of age 8+ years, we provide
@@ -53,7 +54,7 @@ export default function Home() {
             <div className="order-1 md:order-2 relative">
               <div className="relative h-[300px] md:h-[400px] w-full">
                 <Image
-                  src="/placeholder.svg?height=400&width=400"
+                  src="/assets/images/new-gen-robo-logo.jpeg"
                   alt="Educational Expert"
                   fill
                   className="object-contain z-10"
@@ -77,12 +78,14 @@ export default function Home() {
       </motion.section>
 
       {/* Student & Parent Showcase */}
-      
-        <StudentParentShowcase></StudentParentShowcase>
 
+      <StudentParentShowcase></StudentParentShowcase>
 
       {/* Request Demo Section */}
-      <motion.section {...fadeInUp} className="py-16 bg-gradient-to-b from-white to-sky-50">
+      <motion.section
+        {...fadeInUp}
+        className="py-16 bg-gradient-to-b from-white to-sky-50"
+      >
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="bg-white rounded-2xl shadow-lg p-6 md:p-10">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
