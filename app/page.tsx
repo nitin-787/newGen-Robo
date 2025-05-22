@@ -10,6 +10,7 @@ import ProgramCard from "@/components/program-card";
 import programs from "@/data/programs";
 import Footer from "@/components/footer";
 import StudentParentShowcase from "@/components/student-parent";
+import TestimonialScilder from "@/components/testimonial";
 
 export default function Home() {
   const fadeInUp = {
@@ -44,7 +45,8 @@ export default function Home() {
                 development, along with Entrepreneurship and Financial Literacy.
               </p>
               <Link
-                href="https://wa.me/1234567890"
+                href="https://wa.me/9509234130"
+                target="_blank"
                 className="inline-flex items-center gap-2 bg-sky-400 hover:bg-sky-500 text-white px-6 py-3 rounded-full transition-colors"
               >
                 <WhatsappIcon size={20} />
@@ -54,7 +56,7 @@ export default function Home() {
             <div className="order-1 md:order-2 relative">
               <div className="relative h-[300px] md:h-[400px] w-full">
                 <Image
-                  src="/assets/images/new-gen-robo-logo.jpeg"
+                  src="/assets/images/hero-image.jpeg"
                   alt="Educational Expert"
                   fill
                   className="object-contain z-10"
@@ -115,7 +117,6 @@ export default function Home() {
                   title={program.title}
                   image={program.image}
                   description={program.description}
-                  link={program.link}
                 />
               </motion.div>
             ))}
@@ -124,59 +125,7 @@ export default function Home() {
       </motion.section>
 
       {/* Testimonials */}
-      <motion.section {...fadeInUp} className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
-            What Our Students Say
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((item) => (
-              <motion.div
-                key={item}
-                className="bg-sky-50 rounded-xl p-6"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: item * 0.15 }}
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-full overflow-hidden">
-                    <Image
-                      src={`/placeholder.svg?height=50&width=50&text=S${item}`}
-                      alt="Student"
-                      width={50}
-                      height={50}
-                    />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">Student Name</h4>
-                    <p className="text-sm text-gray-500">Grade 8</p>
-                  </div>
-                </div>
-                <p className="text-gray-700">
-                  "The learning experience at Youngovator has been amazing. I've
-                  learned so much about coding and robotics, and now I'm
-                  building my own projects!"
-                </p>
-                <div className="flex text-yellow-400 mt-4">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <svg
-                      key={star}
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                    >
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                    </svg>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.section>
+      <TestimonialScilder></TestimonialScilder>
 
       {/* Footer */}
       <section>

@@ -12,7 +12,6 @@ const navLinks = [
   { href: "/about", label: "About" },
   { href: "/school-lab", label: "School Lab Setup" },
   { href: "/learn-at-center", label: "Learn at a Center" },
-  // { href: "/contact", label: "Contact" },
 ];
 
 export default function Navigation() {
@@ -24,16 +23,19 @@ export default function Navigation() {
   return (
     <div className="container mx-auto px-4 py-4 flex items-center justify-between relative">
       {/* Logo + Tagline */}
-      <Link href="/" className="flex items-center gap-2 z-30">
-        <div className="relative h-10 w-40">
+      <Link href="/" className="flex items-center gap-2 z-30 ml-1">
+        <div className="relative h-10 w-10">
           <Image
             src="/assets/images/new-gen-robo-logo.jpeg"
             alt="new gen robo logo"
             fill
-            className="object-contain"
+            className="object-contain rounded"
             priority
           />
         </div>
+        <span className="text-base sm:text-lg font-medium text-gray-800">
+          New-gen Robo
+        </span>
       </Link>
 
       {/* Desktop Menu */}
