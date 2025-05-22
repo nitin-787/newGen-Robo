@@ -9,10 +9,10 @@ export default function StudentParentShowcase() {
   const photoScrollRef = useRef<HTMLDivElement>(null);
 
   const videos = [
-    "/assets/videos/promo-vid-1.mp4",
-    "/assets/videos/promo-vid-2.mp4",
-    "/assets/videos/promo-vid-3.mp4",
-    "/assets/videos/promo-vid-3.mp4",
+    "https://www.youtube.com/embed/mBHTXQo65p8?autoplay=1&mute=1&loop=1&playlist=mBHTXQo65p8",
+    "https://www.youtube.com/embed/Gzz7at1p4rs?autoplay=1&mute=1&loop=1&playlist=Gzz7at1p4rs",
+    "https://www.youtube.com/embed/XAYhNHhxN0A?autoplay=1&mute=1&loop=1&playlist=XAYhNHhxN0A",
+    "https://www.youtube.com/embed/LJzp_mDxaT0?autoplay=1&mute=1&loop=1&playlist=LJzp_mDxaT0",
   ];
 
   const photos = [
@@ -29,7 +29,6 @@ export default function StudentParentShowcase() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Handle scroll for videos on mobile to update dots
   useEffect(() => {
     const container = videoScrollRef.current;
     if (!container) return;
@@ -45,7 +44,6 @@ export default function StudentParentShowcase() {
     return () => container.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Handle scroll for photos on mobile to update dots
   useEffect(() => {
     const container = photoScrollRef.current;
     if (!container) return;
@@ -61,7 +59,6 @@ export default function StudentParentShowcase() {
     return () => container.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Autoplay videos slider on mobile every 3s
   useEffect(() => {
     const interval = setInterval(() => {
       const nextIndex = (activeVideoIndex + 1) % videos.length;
@@ -71,7 +68,6 @@ export default function StudentParentShowcase() {
     return () => clearInterval(interval);
   }, [activeVideoIndex]);
 
-  // Autoplay photos slider on mobile every 3s
   useEffect(() => {
     const interval = setInterval(() => {
       const nextIndex = (activePhotoIndex + 1) % photos.length;
@@ -109,22 +105,20 @@ export default function StudentParentShowcase() {
           </div>
         ) : (
           <>
-            {/* Desktop 2-row grid */}
+            {/* Desktop View */}
             <div className="hidden lg:block">
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
                 {videos.map((src, i) => (
                   <div
                     key={i}
-                    className="min-w-[50%] sm:min-w-[240px] h-64 rounded-xl shadow-md overflow-hidden snap-center shrink-0"
+                    className="aspect-video rounded-xl shadow-md overflow-hidden"
                   >
-                    <video
+                    <iframe
                       src={src}
-                      controls
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      className="w-full h-full object-cover"
+                      title={`YouTube video ${i + 1}`}
+                      allow="autoplay; encrypted-media"
+                      allowFullScreen
+                      className="w-full h-full"
                     />
                   </div>
                 ))}
@@ -148,9 +142,9 @@ export default function StudentParentShowcase() {
               </div>
             </div>
 
-            {/* Mobile sliders with dots */}
-            <div className="lg:hidden ">
-              {/* Video slider */}
+            {/* Mobile View */}
+            <div className="lg:hidden">
+              {/* Video Slider */}
               <div
                 ref={videoScrollRef}
                 className="flex gap-4 overflow-x-auto pb-2 scroll-smooth snap-x snap-mandatory no-scrollbar"
@@ -158,16 +152,14 @@ export default function StudentParentShowcase() {
                 {videos.map((src, i) => (
                   <div
                     key={i}
-                    className="min-w-[50%] sm-min-[240px] h-60 rounded-xl shadow-md overflow-hidden snap-center shrink-0"
+                    className="min-w-[85%] h-60 rounded-xl shadow-md overflow-hidden snap-center shrink-0 aspect-video"
                   >
-                    <video
+                    <iframe
                       src={src}
-                      controls={false}
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      className="w-full h-full object-cover"
+                      title={`YouTube video ${i + 1}`}
+                      allow="autoplay; encrypted-media"
+                      allowFullScreen
+                      className="w-full h-full"
                     />
                   </div>
                 ))}
@@ -187,7 +179,7 @@ export default function StudentParentShowcase() {
                 ))}
               </div>
 
-              {/* Photo slider */}
+              {/* Photo Slider */}
               <div
                 ref={photoScrollRef}
                 className="flex gap-4 overflow-x-auto pb-2 scroll-smooth snap-x snap-mandatory no-scrollbar mt-3"
