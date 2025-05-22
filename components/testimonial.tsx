@@ -121,7 +121,7 @@ export default function TestimonialSlider() {
             {testimonials.map((item, i) => (
               <div
                 key={i}
-                className="min-w-full snap-center shrink-0 bg-sky-50 rounded-xl p-6"
+                className="w-full shrink-0 snap-center bg-sky-50 rounded-xl p-6"
               >
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 rounded-full overflow-hidden">

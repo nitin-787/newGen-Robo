@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
@@ -16,9 +16,39 @@ const navLinks = [
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const scrollRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
+
+  useEffect(() => {
+    if (isMenuOpen && scrollRef.current) {
+      const activeIndex = navLinks.findIndex((link) => link.href === pathname);
+      const container = scrollRef.current;
+      const child = container.children[activeIndex] as HTMLElement;
+      if (child) {
+        container.scrollTo({
+          left: child.offsetLeft,
+          behavior: "smooth",
+        });
+      }
+    }
+  }, [isMenuOpen, pathname]);
+
+  // prevent body scroll when menu is open
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? "hidden" : "";
+    document.documentElement.style.overflow = isMenuOpen ? "hidden" : "";
+  }, [isMenuOpen]);
+
+  {
+    isMenuOpen && (
+      <div
+        className="fixed inset-0 bg-black bg-opacity-30 z-30"
+        onClick={closeMenu}
+      />
+    );
+  }
 
   return (
     <div className="container mx-auto px-4 py-4 flex items-center justify-between relative">
@@ -33,7 +63,7 @@ export default function Navigation() {
             priority
           />
         </div>
-        <span className="text-base sm:text-lg font-medium text-gray-800">
+        <span className="text-base sm:text-lg font-medium text-gray-800 ml-1">
           New-gen Robo
         </span>
       </Link>
@@ -57,45 +87,46 @@ export default function Navigation() {
 
       {/* Mobile Menu Button */}
       <button
-        className="md:hidden z-30"
-        onClick={toggleMenu}
+        className="md:hidden z-50"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
         aria-label="Toggle menu"
       >
-        {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        {isMenuOpen ? (
+          <X className="w-6 h-6 text-gray-700 hover:text-sky-500" />
+        ) : (
+          <Menu className="w-6 h-6" />
+        )}
       </button>
 
-      {/* Mobile Overlay Menu */}
+      {/* Mobile Fullscreen Menu */}
       <div
         className={cn(
-          "fixed inset-0 z-20 bg-white/90 backdrop-blur-lg transition-transform duration-300 md:hidden flex flex-col pt-24 px-6",
+          "fixed top-0 right-0 h-screen w-1/2 max-w-xs bg-white z-40 transition-transform duration-300 md:hidden flex flex-col pt-20 px-6 overflow-y-auto",
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         )}
+        ref={scrollRef}
       >
-        <nav className="flex flex-col gap-6 text-lg">
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              onClick={() => setIsMenuOpen(false)}
-              className={cn(
-                "border-b pb-2 border-gray-200 text-gray-700 hover:text-sky-500 transition-colors",
-                pathname === link.href && "text-sky-600 font-semibold"
-              )}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-
-        <div className="mt-auto mb-8 pt-8">
+        {navLinks.map((link) => (
           <Link
-            href="/contact"
-            className="w-full text-center block bg-sky-500 text-white py-3 rounded-full hover:bg-sky-600 transition"
-            onClick={() => setIsMenuOpen(false)}
+            key={link.label}
+            href={link.href}
+            onClick={closeMenu}
+            className={cn(
+              "text-lg border-b border-gray-200 py-4 block text-gray-700 hover:text-sky-500 transition-colors",
+              pathname === link.href && "text-sky-600 font-semibold"
+            )}
           >
-            Get in Touch
+            {link.label}
           </Link>
-        </div>
+        ))}
+        <Link
+          href="https://wa.me/9509234130"
+          target="_blank"
+          onClick={closeMenu}
+          className="mt-auto mb-8 py-3 bg-sky-500 text-white rounded-full text-center hover:bg-sky-600 transition"
+        >
+          Get in Touch
+        </Link>
       </div>
     </div>
   );
