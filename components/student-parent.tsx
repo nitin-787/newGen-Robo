@@ -18,8 +18,8 @@ export default function StudentParentShowcase() {
   const photos = [
     "/assets/images/slider-img-1.jpeg",
     "/assets/images/slider-img-2.jpeg",
-    "/assets/images/slider-img-3.jpeg",
-    "/assets/images/slider-img-4.jpeg",
+    "/assets/images/slider-img-5.jpeg",
+    "/assets/images/slider-img-6.jpeg",
   ];
 
   useEffect(() => {
@@ -128,14 +128,14 @@ export default function StudentParentShowcase() {
                 {photos.map((src, i) => (
                   <div
                     key={i}
-                    className="rounded-xl shadow-md overflow-hidden relative w-full aspect-[5/5]"
+                    className="rounded-xl shadow-md overflow-hidden relative w-full aspect-[5/5] bg-white"
                   >
                     <Image
                       src={src}
                       alt={`Event ${i + 1}`}
                       fill
                       sizes="(min-width: 1024px) 25vw, 50vw"
-                      className="object-cover"
+                      className="object-contain"
                     />
                   </div>
                 ))}
@@ -165,7 +165,7 @@ export default function StudentParentShowcase() {
                 ))}
               </div>
 
-              <div className="flex justify-center mt-3 gap-2">
+              <div className="flex justify-center mt-4 gap-2">
                 {videos.map((_, i) => (
                   <button
                     key={i}
@@ -182,12 +182,12 @@ export default function StudentParentShowcase() {
               {/* Photo Slider */}
               <div
                 ref={photoScrollRef}
-                className="flex gap-4 overflow-x-auto pb-2 scroll-smooth snap-x snap-mandatory no-scrollbar mt-3"
+                className="flex gap-4 overflow-x-auto pb-2 scroll-smooth snap-x snap-mandatory no-scrollbar mt-4"
               >
                 {photos.map((src, i) => (
                   <div
                     key={i}
-                    className="min-w-[50%] sm:min-w-[240px] h-60 rounded-xl shadow-md overflow-hidden snap-center shrink-0"
+                    className="min-w-[70%] sm:min-w-[300px] h-96 rounded-2xl shadow-lg overflow-hidden snap-center shrink-0"
                   >
                     <div className="relative w-full h-full">
                       <Image
@@ -202,7 +202,7 @@ export default function StudentParentShowcase() {
                 ))}
               </div>
 
-              <div className="flex justify-center mt-3 gap-2">
+              <div className="flex justify-center mt-4 gap-2">
                 {photos.map((_, i) => (
                   <button
                     key={i}
