@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
+import WhatsAppFloatingButton from "@/components/whatsapp-floating";
 
 export default function LearnAtCenter() {
   return (
@@ -159,6 +160,10 @@ export default function LearnAtCenter() {
           </form>
         </div>
       </section>
+
+      {/* WhatsApp Floating Button */}
+      <WhatsAppFloatingButton />
+
 
       {/* Footer */}
       <Footer />

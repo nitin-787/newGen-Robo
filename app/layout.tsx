@@ -1,24 +1,24 @@
-import type { Metadata } from 'next'
-import './globals.css'
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'Nitinify',
-  description: 'Created with love by Nitin',
+  title: "New-gen Robo",
+  description: "Created with love by Nitin",
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
+    icon: "/public/assets/images/new-gen-robo-logo.jpeg",
+    shortcut: "/favicon.ico",
+    apple: "/public/assets/images/new-gen-robo-logo.jpeg",
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
       <body>{children}</body>
     </html>
-  )
+  );
 }

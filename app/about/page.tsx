@@ -1,6 +1,7 @@
 import Navigation from "@/components/navigation";
 import Image from "next/image";
 import Footer from "@/components/footer";
+import WhatsAppFloatingButton from "@/components/whatsapp-floating";
 
 export default function AboutPage() {
   return (
@@ -86,6 +87,9 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* WhatsApp Floating Button */}
+      <WhatsAppFloatingButton />
+      
       {/* Footer */}
       <section>
         <Footer />

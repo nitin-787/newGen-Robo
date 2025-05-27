@@ -1,7 +1,6 @@
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import WhatsAppFloatingButton from "@/components/whatsapp-floating";
 
 export default function SchoolLabSetup() {
   return (
@@ -196,6 +195,9 @@ export default function SchoolLabSetup() {
           </div>
         </div>
       </section>
+
+      {/* WhatsApp Floating Button */}
+      <WhatsAppFloatingButton />
 
       {/* Footer */}
       <section>

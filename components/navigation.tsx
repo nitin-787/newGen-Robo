@@ -119,14 +119,6 @@ export default function Navigation() {
             {link.label}
           </Link>
         ))}
-        <Link
-          href="https://wa.me/9509234130"
-          target="_blank"
-          onClick={closeMenu}
-          className="mt-auto mb-8 py-3 bg-sky-500 text-white rounded-full text-center hover:bg-sky-600 transition"
-        >
-          Get in Touch
-        </Link>
       </div>
     </div>
   );

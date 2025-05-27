@@ -11,6 +11,7 @@ import programs from "@/data/programs";
 import Footer from "@/components/footer";
 import StudentParentShowcase from "@/components/student-parent";
 import TestimonialScilder from "@/components/testimonial";
+import WhatsAppFloatingButton from "@/components/whatsapp-floating";
 
 export default function Home() {
   const fadeInUp = {
@@ -126,6 +127,9 @@ export default function Home() {
 
       {/* Testimonials */}
       <TestimonialScilder></TestimonialScilder>
+
+      {/* WhatsApp Floating Button */}
+      <WhatsAppFloatingButton />
 
       {/* Footer */}
       <section>
