@@ -5,11 +5,18 @@ export const metadata: Metadata = {
   title: "New-gen Robo",
   description: "Created with love by Nitin",
   icons: {
-    icon: "/public/assets/images/new-gen-robo-logo.jpeg",
-    shortcut: "/favicon.ico",
-    apple: "/public/assets/images/new-gen-robo-logo.jpeg",
+    icon: "/assets/favicon/favicon.ico", 
+    shortcut: "/assets/favicon/favicon.ico", 
+    apple: "/assets/favicon/apple-touch-icon.png", 
+    other: [
+      { rel: "icon", url: "/assets/favicon/favicon-16x16.png" },
+      { rel: "icon", url: "/assets/favicon/favicon-32x32.png" },
+      { rel: "icon", url: "/assets/favicon/favicon-96x96.png" },
+      { rel: "apple-touch-icon", url: "/assets/favicon/apple-touch-icon.png" },
+    ],
   },
 };
+
 
 export default function RootLayout({
   children,

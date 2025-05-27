@@ -106,7 +106,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/programs"
+                  href="/#programs"
                   className="text-gray-400 hover:text-white"
                 >
                   Programs
