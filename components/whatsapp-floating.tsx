@@ -2,7 +2,7 @@ import React from "react";
 import { FaWhatsapp } from "react-icons/fa"; // npm install react-icons
 
 const WhatsAppFloatingButton: React.FC = () => {
-  const whatsappLink = "https://wa.me/9509234130"; // Replace with your number
+  const whatsappLink = "https://wa.me/919509234130"; // Replace with your number
 
   return (
     <a
