@@ -46,7 +46,7 @@ export default function Home() {
                 development, along with Entrepreneurship and Financial Literacy.
               </p>
               <Link
-                href="https://wa.me/9509234130"
+                href="https://wa.me/919509234130"
                 target="_blank"
                 className="inline-flex items-center gap-2 bg-sky-400 hover:bg-sky-500 text-white px-6 py-3 rounded-full transition-colors"
               >
