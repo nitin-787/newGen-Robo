@@ -10,7 +10,7 @@ export default function InnovationLabShowcase() {
           <div className="lg:col-span-5">
             <div className="rounded-lg overflow-hidden shadow-md">
               <Image
-                src="/assets/images/showcase.jpeg"
+                src="/assets/images/about-banner.jpeg"
                 alt="SHARD's AI, Robotics & Innovation Lab"
                 width={800}
                 height={450}

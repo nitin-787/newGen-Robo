@@ -16,7 +16,7 @@ export default function AboutPage() {
       {/* Top Banner Image */}
       <div className="relative w-full h-[50vh]">
         <Image
-          src="/assets/images/about-img.jpeg"
+          src="/assets/images/about-banner.jpeg"
           alt="Innovation Lab"
           fill
           className="object-cover"
@@ -39,9 +39,9 @@ export default function AboutPage() {
               learning, empowering young minds to become future tech leaders.
             </p>
           </div>
-          <div className="w-full max-w-md aspect-video rounded-md overflow-hidden shadow-md border border-gray-200 relative">
+          <div className="w-full max-w-md h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] aspect-video rounded-md overflow-hidden shadow-md border border-gray-200 relative">
             <Image
-              src="/innovation-lab.jpg"
+              src="/assets/images/about-img-1.jpeg"
               alt="Lab Activity"
               fill
               className="object-cover"
@@ -51,9 +51,9 @@ export default function AboutPage() {
 
         {/* Section 2: Image Left, Text Right */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 place-items-center">
-          <div className="order-1 md:order-none w-full max-w-md aspect-video rounded-md overflow-hidden shadow-md border border-gray-200 relative">
+          <div className="w-full max-w-md h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] aspect-video rounded-md overflow-hidden shadow-md border border-gray-200 relative">
             <Image
-              src="/innovation-lab.jpg"
+              src="/assets/images/about-img-2.jpeg"
               alt="Lab Activity"
               fill
               className="object-cover"
@@ -84,9 +84,9 @@ export default function AboutPage() {
               nurture innovation and leadership in a supportive ecosystem.
             </p>
           </div>
-          <div className="w-full max-w-md aspect-video rounded-md overflow-hidden shadow-md border border-gray-200 relative">
+          <div className="w-full max-w-md h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] aspect-video rounded-md overflow-hidden shadow-md border border-gray-200 relative">
             <Image
-              src="/innovation-lab.jpg"
+              src="/assets/images/about-img-3.jpeg"
               alt="Lab Activity"
               fill
               className="object-cover"
