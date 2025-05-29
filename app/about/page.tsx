@@ -13,10 +13,10 @@ export default function AboutPage() {
         </div>
       </header>
 
-      {/* Top Half Image */}
+      {/* Top Banner Image */}
       <div className="relative w-full h-[50vh]">
         <Image
-          src="/lab-banner.jpg"
+          src="/assets/images/about-img.jpeg"
           alt="Innovation Lab"
           fill
           className="object-cover"
@@ -24,10 +24,10 @@ export default function AboutPage() {
         />
       </div>
 
-      {/* Combined Alternating Sections */}
-      <section className="py-16 px-4 max-w-6xl mx-auto space-y-24">
-        {/* Section 1: LHS Content, RHS Image */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+      {/* About Sections */}
+      <section className="py-16 px-4 max-w-6xl mx-auto space-y-16">
+        {/* Section 1: Text Left, Image Right */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 place-items-center">
           <div>
             <h2 className="text-3xl font-semibold mb-4 text-gray-800">
               Why Choose Us?
@@ -39,22 +39,22 @@ export default function AboutPage() {
               learning, empowering young minds to become future tech leaders.
             </p>
           </div>
-          <div className="w-full h-64 md:h-80 rounded-lg overflow-hidden shadow-md border border-gray-200">
+          <div className="w-full max-w-md aspect-video rounded-md overflow-hidden shadow-md border border-gray-200 relative">
             <Image
-              src="/lab-students-1.jpg"
-              alt="Students in lab"
+              src="/innovation-lab.jpg"
+              alt="Lab Activity"
               fill
               className="object-cover"
             />
           </div>
         </div>
 
-        {/* Section 2: LHS Image, RHS Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-          <div className="w-full h-64 md:h-80 rounded-lg overflow-hidden shadow-md border border-gray-200">
+        {/* Section 2: Image Left, Text Right */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 place-items-center">
+          <div className="order-1 md:order-none w-full max-w-md aspect-video rounded-md overflow-hidden shadow-md border border-gray-200 relative">
             <Image
-              src="/project-session.jpg"
-              alt="Project Session"
+              src="/innovation-lab.jpg"
+              alt="Lab Activity"
               fill
               className="object-cover"
             />
@@ -72,8 +72,8 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Section 3: LHS Content, RHS Image */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+        {/* Section 3: Text Left, Image Right */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 place-items-center">
           <div>
             <h2 className="text-3xl font-semibold mb-4 text-gray-800">
               Mentorship & Growth
@@ -84,10 +84,10 @@ export default function AboutPage() {
               nurture innovation and leadership in a supportive ecosystem.
             </p>
           </div>
-          <div className="w-full h-64 md:h-80 rounded-lg overflow-hidden shadow-md border border-gray-200">
+          <div className="w-full max-w-md aspect-video rounded-md overflow-hidden shadow-md border border-gray-200 relative">
             <Image
-              src="/mentor-session.jpg"
-              alt="Mentorship"
+              src="/innovation-lab.jpg"
+              alt="Lab Activity"
               fill
               className="object-cover"
             />
@@ -95,7 +95,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* WhatsApp Floating Button */}
+      {/* WhatsApp Button */}
       <WhatsAppFloatingButton />
 
       {/* Footer */}
