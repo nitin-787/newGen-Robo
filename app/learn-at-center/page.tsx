@@ -18,16 +18,15 @@ export default function LearnAtCenter() {
         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-10">
           {/* Image */}
           <div className="w-full lg:w-1/2 flex justify-center">
-          <Image
-            src="/assets/images/learn-at-center.jpeg"
-            alt="Student with robotics kit"
-            width={835}
-            height={730}
-            className="rounded-lg w-full h-auto max-h-[700px] object-contain"
-            sizes="(min-width: 1024px) 835px, 100vw"
-          />
-        </div>
-
+            <Image
+              src="/assets/images/learn-at-center.jpeg"
+              alt="Student with robotics kit"
+              width={835}
+              height={730}
+              className="rounded-lg w-full h-auto max-h-[700px] object-contain"
+              sizes="(min-width: 1024px) 835px, 100vw"
+            />
+          </div>
 
           {/* Text & Skills */}
           <div className="w-full lg:w-1/2">
@@ -35,13 +34,13 @@ export default function LearnAtCenter() {
               Join Innovation Lab
             </h1>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              We are thrilled to announce our Science & Robotics Summer Camp for
-              kids aged 8 to 18 years! Prepare to embark on an exciting journey
-              filled with creativity, learning, and fun. Our camp offers a
-              unique blend of activities ranging from building with robotics,
-              science experiments, Coding, App development, drone and 3D
-              printing, all centred around the theme of problem solving and
-              critical thinking.
+              Join us for an exciting Science & Robotics Summer Camp designed
+              for kids aged 8 to 18 years! This hands-on camp is packed with fun
+              and learning, where students will dive into robotics, science
+              experiments, coding, app development, drone technology, and 3D
+              printing. Every activity is carefully crafted to spark creativity,
+              enhance problem-solving skills, and foster critical thinking in a
+              dynamic, engaging environment.
             </p>
 
             <h2 className="text-3xl font-bold text-[#1a1a40] mb-4">Skills</h2>
@@ -163,7 +162,6 @@ export default function LearnAtCenter() {
 
       {/* WhatsApp Floating Button */}
       <WhatsAppFloatingButton />
-
 
       {/* Footer */}
       <Footer />

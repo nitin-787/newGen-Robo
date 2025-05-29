@@ -101,7 +101,7 @@ export default function SchoolLabSetup() {
             {/* Right Column: Images */}
             <div className="flex flex-col gap-6 items-center justify-center">
               <h2 className="text-2xl sm:text-3xl font-bold text-center">
-                Open an Innovation Lab at your school with Youngovator
+                Open an Innovation Lab at your school with New-gen Robo
               </h2>
 
               {/* First row of images */}
@@ -145,43 +145,27 @@ export default function SchoolLabSetup() {
         <div className="container mx-auto px-4 max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left Column: Benefits List */}
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-6 leading-snug">
               What do Schools gain from our <br /> Innovation Lab Set-up
             </h2>
-            <ul className="space-y-4 text-base sm:text-lg">
+            <ul className="list-disc pl-5 space-y-4 text-base sm:text-lg text-gray-800">
+              <li>End to end Training Execution support to school</li>
               <li>
-                <span className="bg-sky-100 text-sky-800 px-3 py-1 rounded">
-                  End to end Training Execution support to school
-                </span>
+                Support in setting up high-tech state of art infrastructure /
+                Innovation lab in the school
               </li>
               <li>
-                <span className="bg-pink-100 text-pink-800 px-3 py-1 rounded">
-                  Support in setting up high-tech state of art infrastructure /
-                  Innovation lab in the school
-                </span>
+                Help in organising school level / district level robotics
+                related event in the campus
               </li>
               <li>
-                <span className="bg-sky-100 text-sky-800 px-3 py-1 rounded">
-                  Help in organising school level / district level robotics
-                  related event in the campus
-                </span>
+                Exclusive shout-out to partners during our National level
+                Innovation Carnival
               </li>
               <li>
-                <span className="bg-pink-100 text-pink-800 px-3 py-1 rounded">
-                  Exclusive shout-out to partners during our National level
-                  Innovation Carnival
-                </span>
+                Branding & promotion at Youngovator’s social media handles
               </li>
-              <li>
-                <span className="bg-sky-100 text-sky-800 px-3 py-1 rounded">
-                  Branding & promotion at Youngovator’s social media handles
-                </span>
-              </li>
-              <li>
-                <span className="bg-pink-100 text-pink-800 px-3 py-1 rounded">
-                  Help students in preparation for IIT level events
-                </span>
-              </li>
+              <li>Help students in preparation for IIT level events</li>
             </ul>
           </div>
 

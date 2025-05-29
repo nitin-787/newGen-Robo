@@ -22,16 +22,16 @@ export default function InnovationLabShowcase() {
           {/* Description */}
           <div className="lg:col-span-7 space-y-6">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0a2463] leading-tight">
-              SHARD&apos;s AI, Robotics & Innovation Lab
+              New-gen Robo’s AI, Robotics & Innovation Lab{" "}
             </h2>
 
             <p className="text-gray-700 text-base sm:text-lg">
-              Transforming education through hands-on AI, Robotics, and Coding
-              learning. Empowering students with cutting-edge technology,
-              interactive DIY kits, practical projects, and an annual innovation
-              fest to shape future innovators.
+              At New-gen Robo, we’re redefining learning with hands-on
+              experiences in AI, robotics, and coding. Through interactive DIY
+              kits, real-world projects, and our exciting annual innovation
+              festival, we inspire and equip students to become tomorrow’s tech
+              pioneers.
             </p>
-
             <div className="flex flex-wrap gap-2">
               {[
                 "Artificial Intelligence",

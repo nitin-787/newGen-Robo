@@ -21,7 +21,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-sky-50">
+    <div className="min-h-screen bg-[#f2fcfe]">
       {/* Navigation */}
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
@@ -36,14 +36,15 @@ export default function Home() {
             <div className="order-2 md:order-1">
               <p className="text-gray-600 mb-2">Welcome to</p>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                India&apos;s Leading Phygital Learning Platform for Young
-                Innovators
+                Phygital Learning for Tomorrow’s Thinkers – Now in Rajasthan
               </h1>
               <p className="text-gray-700 mb-8 max-w-lg">
-                If you&apos;re a budding inventor of age 8+ years, we provide
-                the perfect online & offline platform for learning new age Tech
-                Skills like Coding, Robotics, Drone, 3D Printing, App & Web
-                development, along with Entrepreneurship and Financial Literacy.
+                At New-gen Robo, we empower young inventors aged 8 and above
+                with a blend of online and offline learning experiences.
+                Discover exciting tech skills like coding, robotics, drones, 3D
+                printing, app and web development—plus essentials like
+                entrepreneurship and financial literacy—to spark creativity and
+                build the innovators of tomorrow.
               </p>
               <Link
                 href="https://wa.me/919509234130"

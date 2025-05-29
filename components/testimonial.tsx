@@ -6,34 +6,35 @@ export default function TestimonialSlider() {
   const [activeIndex, setActiveIndex] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
 
+  // uncomment the following lines if you want to use the grade property
   const testimonials = [
     {
       name: "Prabhav Saran",
-      grade: "Grade 8",
+      // grade: "Grade 8",
       message:
         "New-gen Robo helped me turn my curiosity into real skills. I’ve built a smart traffic light system using coding and sensors—it’s been so exciting!",
     },
     {
       name: "Sumit Saini",
-      grade: "Grade 7",
+      // grade: "Grade 7",
       message:
         "Before joining, I barely knew what programming was. Now, I’ve made a game all by myself! Learning here is super fun and creative.",
     },
     {
       name: "Gaurav",
-      grade: "Grade 6",
+      // grade: "Grade 6",
       message:
         "At first, coding looked really hard, but the mentors at New-gen Robo made it simple and fun. I created a robot that follows light—how cool is that?",
     },
     {
       name: "Laltesh Chahar",
-      grade: "Grade 6",
+      // grade: "Grade 6",
       message:
         "I used to play games, now I make them! Thanks to New-gen Robo, I built a maze game that my friends love. I never knew I could do this at my age.",
     },
     {
       name: "Vikram Saini",
-      grade: "Grade 6",
+      // grade: "Grade 6",
       message:
         "Learning robotics at New-gen Robo has been the best part of my week. I recently made a smart dustbin that opens with a hand wave!",
     },

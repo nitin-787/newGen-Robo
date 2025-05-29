@@ -8,11 +8,12 @@ export default function StudentParentShowcase() {
   const videoScrollRef = useRef<HTMLDivElement>(null);
   const photoScrollRef = useRef<HTMLDivElement>(null);
 
+  // Remove the commented-out video links if not needed
   const videos = [
-    "https://www.youtube.com/embed/mBHTXQo65p8?autoplay=1&mute=1&loop=1&playlist=mBHTXQo65p8",
-    "https://www.youtube.com/embed/Gzz7at1p4rs?autoplay=1&mute=1&loop=1&playlist=Gzz7at1p4rs",
-    "https://www.youtube.com/embed/XAYhNHhxN0A?autoplay=1&mute=1&loop=1&playlist=XAYhNHhxN0A",
-    "https://www.youtube.com/embed/LJzp_mDxaT0?autoplay=1&mute=1&loop=1&playlist=LJzp_mDxaT0",
+    // "https://www.youtube.com/embed/mBHTXQo65p8?autoplay=1&mute=1&loop=1&playlist=mBHTXQo65p8",
+    // "https://www.youtube.com/embed/Gzz7at1p4rs?autoplay=1&mute=1&loop=1&playlist=Gzz7at1p4rs",
+    // "https://www.youtube.com/embed/XAYhNHhxN0A?autoplay=1&mute=1&loop=1&playlist=XAYhNHhxN0A",
+    // "https://www.youtube.com/embed/LJzp_mDxaT0?autoplay=1&mute=1&loop=1&playlist=LJzp_mDxaT0",
   ];
 
   const photos = [
@@ -23,7 +24,6 @@ export default function StudentParentShowcase() {
     // "/assets/images/slider-img-5.jpeg",
     "/assets/images/slider-img-6.jpeg",
   ];
-
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -99,7 +99,8 @@ export default function StudentParentShowcase() {
     <section className="py-16 bg-sky-50">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
-          Hear what our Students & Parents have to say...
+          What students and parents are saying about their journey with New-gen
+          Robo...
         </h2>
 
         {loading ? (
