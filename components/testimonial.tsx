@@ -8,22 +8,34 @@ export default function TestimonialSlider() {
 
   const testimonials = [
     {
-      name: "Student One",
+      name: "Prabhav Saran",
       grade: "Grade 8",
       message:
-        "The learning experience at Youngovator has been amazing. I've learned so much about coding and robotics, and now I'm building my own projects!",
+        "New-gen Robo helped me turn my curiosity into real skills. I’ve built a smart traffic light system using coding and sensors—it’s been so exciting!",
     },
     {
-      name: "Student Two",
+      name: "Sumit Saini",
       grade: "Grade 7",
       message:
-        "This program sparked my interest in tech. The hands-on approach makes learning so much fun!",
+        "Before joining, I barely knew what programming was. Now, I’ve made a game all by myself! Learning here is super fun and creative.",
     },
     {
-      name: "Student Three",
+      name: "Gaurav",
       grade: "Grade 6",
       message:
-        "I never thought I could build something on my own, but now I can code and create. Thank you!",
+        "At first, coding looked really hard, but the mentors at New-gen Robo made it simple and fun. I created a robot that follows light—how cool is that?",
+    },
+    {
+      name: "Laltesh Chahar",
+      grade: "Grade 6",
+      message:
+        "I used to play games, now I make them! Thanks to New-gen Robo, I built a maze game that my friends love. I never knew I could do this at my age.",
+    },
+    {
+      name: "Vikram Saini",
+      grade: "Grade 6",
+      message:
+        "Learning robotics at New-gen Robo has been the best part of my week. I recently made a smart dustbin that opens with a hand wave!",
     },
   ];
 

@@ -17,10 +17,13 @@ export default function StudentParentShowcase() {
 
   const photos = [
     "/assets/images/slider-img-1.jpeg",
-    "/assets/images/slider-img-2.jpeg",
-    "/assets/images/slider-img-5.jpeg",
+    // "/assets/images/slider-img-2.jpeg",
+    "/assets/images/slider-img-3.jpeg",
+    "/assets/images/slider-img-4.jpeg",
+    // "/assets/images/slider-img-5.jpeg",
     "/assets/images/slider-img-6.jpeg",
   ];
+
 
   useEffect(() => {
     const timer = setTimeout(() => {
